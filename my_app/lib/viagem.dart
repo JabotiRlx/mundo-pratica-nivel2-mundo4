@@ -21,15 +21,15 @@ class viagem extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: const Text(
-                    'Oeschinen Lake Campground',
+                  child:  Text(
+                    destino.nome,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Text(
-                  'Kandersteg, Switzerland',
+                  destino.cidade  + ', ' + destino.pais,
                   style: TextStyle(
                     color: Colors.grey[500],
                   ),
@@ -81,18 +81,18 @@ class viagem extends StatelessWidget {
     // Construção da seção de texto
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
-      child: const Text(
-        'O Lago Oeschinen fica aos pés do Blüemlisalp nos Alpes Berneses. Situado a 1.578 metros acima do nível do mar, é um dos lagos alpinos mais amplos. Um passeio de teleférico a partir de Kandersteg, seguido por meia hora de caminhada por pastagens e floresta de pinheiros, leva você ao lago, que aquece até 20 graus Celsius no verão. As atividades desfrutadas aqui incluem remo e andar no tobogã de verão.',
+      child:  Text(
+        destino.descricao,
         softWrap: true,
       ),
     );
 
     // Organizando os elementos em uma ListView
     return MaterialApp(
-      title: 'Demonstração de layout Flutter',
+      title: '',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Demonstração de layout Flutter'),
+    
         ),
         body: ListView(
           children: [
